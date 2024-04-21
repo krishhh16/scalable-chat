@@ -24,7 +24,7 @@ class SocketService {
             console.log(`New Socket init ${s.id}`)
 
             s.on('event:message', async ({msg}: {msg: string}) => {
-                console.log('New Message Rec', msg)
+                console.log('New Message: ', msg)
             })
         } )
     }

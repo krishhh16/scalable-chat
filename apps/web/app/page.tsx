@@ -15,7 +15,7 @@ export default function () {
       </div> 
       <div>
         <input onChange={e => setMessage(e.target.value)} className={classes['chat-input']} placeholder="Message.." />
-        <button onClick={e => sendMessage(message)} className={classes['button']}>Send</button>
+        <button onClick={() => sendMessage(message)} className={classes['button']}>Send</button>
       </div>
     </div>
   )
