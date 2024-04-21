@@ -5,7 +5,7 @@ import classes from './page.module.css'
 
 
 export default function () {
-  const { sendMessage} = useSocket();
+  const { sendMessage, messages} = useSocket();
   const [message, setMessage] = useState('')
 
   return (
@@ -16,6 +16,11 @@ export default function () {
       <div>
         <input onChange={e => setMessage(e.target.value)} className={classes['chat-input']} placeholder="Message.." />
         <button onClick={() => sendMessage(message)} className={classes['button']}>Send</button>
+      </div>
+      <div>
+        {messages.map(e => {
+         return  <li>{e}</li>
+        })}
       </div>
     </div>
   )

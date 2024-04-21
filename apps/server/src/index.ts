@@ -6,7 +6,7 @@ async function init() {
 
     const socketService = new SocketService();
     const httpServer = http.createServer();
-    const PORT = process.env.PORT ? process.env.PORT : 8000;
+    const PORT =  8000;
 
     socketService.io.attach(httpServer)
 
